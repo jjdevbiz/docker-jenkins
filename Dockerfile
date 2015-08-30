@@ -2,6 +2,11 @@ FROM debian:jessie
 
 ENV VER 1.626
 
+# Set default locale for the environment
+ENV LC_ALL C.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+
 RUN apt-get update && \
     apt-get upgrade -y -qq && \
     apt-get --no-install-recommends install -q -y openjdk-7-jre-headless && \
